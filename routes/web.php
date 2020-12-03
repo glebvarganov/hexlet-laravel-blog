@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/about', 'App\Http\Controllers\PageController@about');
-Route::get('articles', 'App\Http\Controllers\ArticleController@index');
+Route::get('articles', 'App\Http\Controllers\ArticleController@index')->name('articles.index');
