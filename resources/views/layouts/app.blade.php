@@ -13,7 +13,7 @@
 <div class="container mt-4">
 
     <nav class="simple-menu">
-        <a href="{{ action([\App\Http\Controllers\ArticleController::class, 'index']) }}">Статьи</a>
+        <a href="{{ route('articles.index') }}">Статьи</a>
     </nav>
 
     <h1>@yield('header')</h1>
