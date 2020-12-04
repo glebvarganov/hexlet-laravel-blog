@@ -18,5 +18,15 @@ Route::get('/', function () {
 });
 
 Route::get('/about', 'App\Http\Controllers\PageController@about');
-Route::get('articles', 'App\Http\Controllers\ArticleController@index')->name('articles.index');
-Route::get('article/{id}', 'App\Http\Controllers\ArticleController@show')->name('article.show');
+
+Route::get('articles', 'App\Http\Controllers\ArticleController@index')
+    ->name('articles.index');
+
+Route::post('articles', 'App\Http\Controllers\ArticleController@store')
+    ->name('articles.store');
+
+Route::get('articles/create', 'App\Http\Controllers\ArticleController@create')
+    ->name('articles.create');
+
+Route::get('article/{id}', 'App\Http\Controllers\ArticleController@show')
+    ->name('article.show');

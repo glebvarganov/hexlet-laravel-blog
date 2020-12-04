@@ -14,6 +14,7 @@
 
     <nav class="simple-menu">
         <a href="{{ route('articles.index') }}">Статьи</a>
+        <a href="{{ route('articles.create') }}">Добавить статью</a>
     </nav>
 
     <h1>@yield('header')</h1>

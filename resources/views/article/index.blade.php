@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+    @if (Session::has('flash_message'))
+        <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
+    @endif
+
     <h1>Список статей</h1>
     @foreach ($articles as $article)
         <h2><a href="{{ route('article.show', ['id' => $article->id]) }}" {{$article->name}}</a></h2>
