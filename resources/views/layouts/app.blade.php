@@ -12,9 +12,9 @@
 <body>
 <div class="container mt-4">
 
-    <nav class="simple-menu">
-        <a href="{{ route('articles.index') }}">Статьи</a>
-        <a href="{{ route('articles.create') }}">Добавить статью</a>
+    <nav>
+        <a href="{{ route('pages.index') }}">Все страницы</a>
+        <a href="{{ route('pages.create') }}">Добавить страницу</a>
     </nav>
 
     <h1>@yield('header')</h1>

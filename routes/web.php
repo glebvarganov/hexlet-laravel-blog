@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,8 +22,6 @@ Route::get('/', function () {
  * CRUD Articles
  */
 
-Route::get('/about', 'App\Http\Controllers\PageController@about');
-
 Route::get('articles', 'App\Http\Controllers\ArticleController@index')
     ->name('articles.index');
 
@@ -40,3 +39,8 @@ Route::get('articles/{id}/edit', 'App\Http\Controllers\ArticleController@edit')
 
 Route::patch('articles/{id}', 'App\Http\Controllers\ArticleController@update')
     ->name('articles.update');
+
+Route::delete('articles/{id}', 'App\Http\Controllers\ArticleController@destroy')
+    ->name('articles.destroy');
+
+Route::resource('pages', PageController::class);
